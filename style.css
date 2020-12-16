@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#board{
+    width: 300px;
+    height: 300px;
+    outline: 3px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+}
+.cell{
+    width: 100px;
+    height: 100px;
+    outline: 1px solid black;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .15s ease-in;
+    background-color: #fff;
+}
+.cell:hover{
+    background: rgba(0,0,0,.25);
+}
+.cell p{
+    font-size: 110px;
+    font-weight: bold;
+}
+#board.disable .cell:hover{
+    background-color: #fff;
+}
+.line{
+    background: red;
+    position: absolute;
+}
+.line.diagonal{
+    width: 1000px;
+    height:6px;
+    transform: rotate(45deg);
+}
+canvas{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#restart{
+    cursor: pointer;
+    font-size: 32px;
+    padding: 14px 50px;
+    background: #2eb92e;
+    margin-bottom: 20px;
+}
